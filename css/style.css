@@ -1,0 +1,271 @@
+/*! system-font.css v2.0.2 | CC0-1.0 License | github.com/jonathantneal/system-font-css */
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNS-Light"), local(".SFNSText-Light"),
+    local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"),
+    local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"),
+    local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 300;
+  src: local(".SFNS-LightItalic"), local(".SFNSText-LightItalic"),
+    local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"),
+    local("Segoe UI Light Italic"), local("Ubuntu Light Italic"),
+    local("Roboto-LightItalic"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 400;
+  src: local(".SFNS-Regular"), local(".SFNSText-Regular"),
+    local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"),
+    local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"),
+    local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 400;
+  src: local(".SFNS-Italic"), local(".SFNSText-Italic"),
+    local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"),
+    local("Segoe UI Italic"), local("Ubuntu Italic"), local("Roboto-Italic"),
+    local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 500;
+  src: local(".SFNS-Medium"), local(".SFNSText-Medium"),
+    local(".HelveticaNeueDeskInterface-MediumP4"), local(".LucidaGrandeUI"),
+    local("Segoe UI Semibold"), local("Ubuntu Medium"), local("Roboto-Medium"),
+    local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 500;
+  src: local(".SFNS-MediumItalic"), local(".SFNSText-MediumItalic"),
+    local(".HelveticaNeueDeskInterface-MediumItalicP4"),
+    local(".LucidaGrandeUI"), local("Segoe UI Semibold Italic"),
+    local("Ubuntu Medium Italic"), local("Roboto-MediumItalic"),
+    local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 700;
+  src: local(".SFNS-Bold"), local(".SFNSText-Bold"),
+    local(".HelveticaNeueDeskInterface-Bold"), local(".LucidaGrandeUI"),
+    local("Segoe UI Bold"), local("Ubuntu Bold"), local("Roboto-Bold"),
+    local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 700;
+  src: local(".SFNS-BoldItalic"), local(".SFNSText-BoldItalic"),
+    local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"),
+    local("Segoe UI Bold Italic"), local("Ubuntu Bold Italic"),
+    local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+:root {
+  font-family: system-ui;
+  /* (62.5/100) * 16px = 10px */
+  font-size: 62.5%;
+  /* 14px */
+  --font-size--small: 1.4rem;
+  /* 16px */
+  --font-size--default: 1.6rem;
+  /* 24px */
+  --font-size--large: 2.4rem;
+}
+
+body {
+  font-size: var(--font-size--default);
+  min-height: 100vh;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+  gap: 15px;
+  background-color: rgb(230, 225, 225);
+}
+aside {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  box-shadow: 2px 5px 5px gray;
+  z-index: 0;
+}
+
+.sidebar {
+  background-color: chartreuse;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+}
+
+footer {
+  background-color: crimson;
+}
+
+.projects {
+  display: grid;
+  grid-template-rows: 2fr 10fr;
+}
+.cardboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 0.5rem;
+}
+
+.hd-tp-one {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.transparent {
+  background-color: transparent;
+  border: transparent;
+  padding: 0;
+  height: auto;
+  width: 35px;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+.center-align {
+  justify-self: center;
+}
+
+.end-align {
+  justify-self: end;
+}
+
+.align-pad {
+  padding-top: 0.5rem;
+}
+
+.space-pad {
+  padding-left: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hd-tp-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.icon-link-size {
+  width: 35px;
+  height: auto;
+  text-align: center;
+}
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 0.5rem;
+}
+
+.hd-bt-one {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+
+.hd-bt-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.red-button {
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 15px;
+  padding: 0.5rem 0;
+}
+
+.gray-bar {
+  background-color: rgb(230, 225, 225);
+  border-radius: 15px;
+  width: 50ch;
+  border: none;
+  padding: 0.5rem;
+}
+
+.gray-bar:focus-visible {
+  outline: 2px solid black;
+}
+
+.round-img {
+  height: auto;
+  border-radius: 50%;
+}
+
+.small-logo {
+  max-width: 40%;
+}
+
+.big-logo {
+  max-width: 70%;
+}
+
+.large-text {
+  font-size: var(--font-size--large);
+  font-weight: bold;
+}
+
+/* Attributions:
+
+- Orange Tabby Kitten on Green Plant, Photo by Chris Clark: https://www.pexels.com/photo/orange-tabby-kitten-on-green-plant-12109413/
+- Icons from materialdesignicons.com
+
+*/

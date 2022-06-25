@@ -99,58 +99,96 @@ body {
 }
 
 .container {
-  height: 100vh;
   display: grid;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 1fr 5fr;
 }
 
 .dashboard {
   display: grid;
-  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-rows: 1fr 5fr;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 10fr 2fr;
-  gap: 15px;
+  grid-template-columns: 4fr 1fr;
   background-color: rgb(230, 225, 225);
+  padding: 1rem;
 }
-aside {
+.side-piece {
+  padding: 0.5rem;
+  gap: 1rem;
+  align-content: start;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
 }
 
-header {
+.bt-separator {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.actions {
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: auto auto;
   box-shadow: 2px 5px 5px gray;
   z-index: 0;
+  padding: 0.5rem;
 }
 
 .sidebar {
-  background-color: chartreuse;
+  background-color: seagreen;
+  color: white;
   display: grid;
-  grid-template-rows: 1fr 2fr 2fr;
-}
-
-footer {
-  background-color: crimson;
+  grid-template-rows: auto auto auto;
+  gap: 4rem;
+  padding: 1rem;
+  align-content: start;
 }
 
 .projects {
+  padding: 0.5rem;
+  gap: 1rem;
+  align-content: start;
   display: grid;
-  grid-template-rows: 2fr 10fr;
+  grid-template-rows: auto auto;
 }
+
+.title-style-one {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.title-style-two {
+  font-size: 1.8rem;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
 .cardboard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  gap: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  background-color: seagreen;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 1rem;
+  border-left: 0.5rem solid orange;
+  align-content: space-between;
 }
 
 .header-top {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 0.5rem;
 }
 
 .hd-tp-one {
@@ -160,18 +198,35 @@ footer {
 }
 
 .hidden {
-  display: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(
+    1px 1px 1px 1px
+  ); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(
+    1px,
+    1px,
+    1px,
+    1px
+  ); /*maybe deprecated but we need to support legacy browsers */
+  clip-path: inset(
+    50%
+  ); /*modern browsers, clip-path works inwards from each corner*/
+  white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
 
 .transparent {
   background-color: transparent;
   border: transparent;
-  padding: 0;
-  height: auto;
+  padding: 0 0.5rem;
   width: 35px;
   cursor: pointer;
   text-align: center;
-  margin-right: 0.5rem;
 }
 
 .center-align {
@@ -186,8 +241,12 @@ footer {
   padding-top: 0.5rem;
 }
 
-.space-pad {
+.space-pad-one {
   padding-left: 1rem;
+}
+
+.space-pad-two {
+  padding-top: 0.5rem;
 }
 
 .bold {
@@ -200,16 +259,9 @@ footer {
   align-items: center;
 }
 
-.icon-link-size {
-  width: 35px;
-  height: auto;
-  text-align: center;
-}
-
 .header-bottom {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 0.5rem;
 }
 
 .hd-bt-one {
@@ -225,9 +277,9 @@ footer {
   gap: 1rem;
 }
 
-.red-button {
+.green-button {
   border: none;
-  background-color: red;
+  background-color: seagreen;
   color: white;
   border-radius: 15px;
   padding: 0.5rem 0;
@@ -246,16 +298,17 @@ footer {
 }
 
 .round-img {
-  height: auto;
   border-radius: 50%;
 }
 
-.small-logo {
-  max-width: 40%;
+.small-img {
+  width: 50px;
+  padding: 0.5rem;
 }
 
-.big-logo {
-  max-width: 70%;
+.big-img {
+  max-width: 80px;
+  padding: 0.5rem;
 }
 
 .large-text {
@@ -263,9 +316,60 @@ footer {
   font-weight: bold;
 }
 
+.links,
+.settings {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-links {
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  display: grid;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  color: inherit;
+}
+
+.grid-links:focus-visible,
+.title-links:focus-visible {
+  text-decoration: underline;
+}
+
+.title-links {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-logo-justify {
+  justify-self: end;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.white-card-one,
+.white-card-two {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+}
+
+.white-card-two {
+  grid-template-rows: auto auto auto auto;
+}
+
 /* Attributions:
 
 - Orange Tabby Kitten on Green Plant, Photo by Chris Clark: https://www.pexels.com/photo/orange-tabby-kitten-on-green-plant-12109413/
 - Icons from materialdesignicons.com
+- Photo by Rémi Rémino: https://unsplash.com/@remino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+- Photo by Cédric VT: https://unsplash.com/@cedric_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+- Photo by Melanie Andersen: https://unsplash.com/@frolleinandersen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+- Photo by The Lucky Neko: https://unsplash.com/@theluckyneko?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 
 */

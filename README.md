@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.postimg.cc/FF8St1kV/Chat-GPT-Image-Aug-13-2025-02-52-24-AM.png" alt="Blog API Banner" width="900" />
+</p>
+
 # Admin Dashboard (CSS Grid)
 
 A simple admin dashboard built to practice modern CSS Grid layout techniques.

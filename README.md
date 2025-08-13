@@ -92,6 +92,4 @@ Key regions are organized with grid:
 
 - Uses a system font stack and rem‑based sizing
 - Layout is fluid; card grid adapts to available width
-- Manifest and favicon paths are relative for GitHub Pages compatibility
-
 ---

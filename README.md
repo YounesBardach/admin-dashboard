@@ -21,40 +21,30 @@ The Odin Project — Intermediate HTML & CSS.
 
 ## Table of Contents
 
-- [Requirements](#requirements)
 - [Live URL](#live-url)
 - [Quick start (local)](#quick-start-local)
 - [Features](#features)
 - [Tech stack](#tech-stack)
 - [Project structure](#project-structure)
 - [Notes](#notes)
-- [Attributions](#attributions)
-- [Reference](#reference)
 
 ---
 
-## Requirements
-
-- Any modern browser
-- No build tools required
-
 ## Live URL
 
-- GitHub Pages: replace with your deployment URL (e.g.,
-  `https://<username>.github.io/admin-dashboard/`)
+- GitHub Pages: https://younesbardach.github.io/admin-dashboard/
 
 ---
 
 ## Quick start (local)
 
 ```bash
-# Option 1: open the file directly
-open index.html  # or double‑click in your file explorer
-
-# Option 2: serve locally (Python 3)
-python3 -m http.server 8000
-# Then visit http://localhost:8000
+# Navigate into the project folder
+cd admin-dashboard
 ```
+
+Then open `index.html` with Live Server (e.g., in VS Code: right‑click
+`index.html` → Open with Live Server).
 
 ---
 
@@ -105,21 +95,3 @@ Key regions are organized with grid:
 - Manifest and favicon paths are relative for GitHub Pages compatibility
 
 ---
-
-## Attributions
-
-- Icons: Material Design Icons
-- Photos and credits (also referenced in `css/style.css`):
-  - Orange Tabby Kitten on Green Plant — Chris Clark:
-    https://www.pexels.com/photo/orange-tabby-kitten-on-green-plant-12109413/
-  - Rémi Rémino: https://unsplash.com/@remino
-  - Cédric VT: https://unsplash.com/@cedric_photography
-  - Melanie Andersen: https://unsplash.com/@frolleinandersen
-  - The Lucky Neko: https://unsplash.com/@theluckyneko
-
----
-
-## Reference
-
-- The Odin Project assignment:
-  https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard

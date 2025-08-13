@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/cat-logo.jpg" alt="Admin Dashboard Banner" width="160" />
+  <img src="https://i.postimg.cc/FF8St1kV/Chat-GPT-Image-Aug-13-2025-02-52-24-AM.png" alt="Blog API Banner" width="900" />
 </p>
 
 <div align="center">
